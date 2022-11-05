@@ -4,14 +4,14 @@ import ThemeContext from '../ThemeContext'
 type ThemeChoiseProps = {}
 const ThemeChoise:FC<ThemeChoiseProps> = () => {
 
-  const contextValue = useContext(ThemeContext)
+  const { theme, updateTheme } = useContext(ThemeContext)
 
   const handleChange = (e : ChangeEvent<HTMLSelectElement>) => {
-    contextValue.updateTheme(e.target.value)
+    updateTheme(e.target.value)
   }
 
   return (
-    <select onChange={handleChange} defaultValue={contextValue.theme}>
+    <select onChange={handleChange} defaultValue={theme}>
       <option value="dark">dark</option>
       <option value="light">light</option>
     </select>
