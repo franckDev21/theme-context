@@ -1,0 +1,13 @@
+.App{
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  &.dark{
+    background-color: #333;
+  }
+  &.light{
+    background-color: #ff;
+  }
+}
